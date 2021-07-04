@@ -1,0 +1,194 @@
+/*
+Theme Name: sender
+Theme URI:
+Author: karmatosed
+Author URI: https://tammielister.com
+Description: Foundations should be simply
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: sender
+Tags: translation-ready
+*/
+
+:root {
+	// Colors.
+	--se-color-cream: #f3f0e7;
+	--se-color-mid-cream: #f6f4ed;
+	--se-color-deep-cream: #eadebd;
+	--se-color-tan: #875d2d;
+	--se-color-text: #222222;
+
+	@media (prefers-color-scheme: dark) {
+	}
+
+	// Other.
+	--se-font-size-tiny: 1rem;
+	--se-font-size-small: 1.1em;
+	--se-font-size-normal: 1.2em;
+	--se-font-size-medium: 1.44em;
+	--se-font-size-large: 1.728em;
+	--se-font-size-huge: 2.074em;
+	--se-font-size-giant: 2.488em;
+
+	--se-border-width: 2px;
+	--se-transition-fast: .15s;
+    --se-border-radius: 2px;
+    
+    --se-site-width: 1280px;
+    --se-content-width: 888px;
+
+	--se-font-stack: 'Lora', sans-serif;
+	--se-font-header: 'Merriweather', sans-serif;
+}
+
+$grid-unit: 8px;
+$grid-unit-05: $grid-unit * 0.5;
+$grid-unit-10: $grid-unit;
+$grid-unit-15: $grid-unit * 1.5;
+$grid-unit-20: $grid-unit * 2;
+$grid-unit-30: $grid-unit * 3;
+$grid-unit-40: $grid-unit * 4;
+$grid-unit-60: $grid-unit * 6;
+$grid-unit-100: $grid-unit * 100;
+$grid-unit-120: $grid-unit * 12;
+
+// Responsive mixin, mobile-first.
+@mixin break-sm() {
+	@media (min-width: #{ (480px) }) {
+		@content;
+	}
+}
+
+@mixin break-md() {
+	@media (min-width: #{ (640px) }) {
+		@content;
+	}
+}
+
+@mixin break-lg() {
+	@media (min-width: #{ (960px) }) {
+		@content;
+	}
+}
+
+@mixin break-xl() {
+	@media (min-width: #{ (1280px) }) {
+		@content;
+	}
+}
+
+
+/**
+ * Base styles and resets.
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	padding: $grid-unit-20;
+}
+
+body {
+	margin: 0;
+	color: var(--se-color-text);
+	font-family: var(--se-font-stack);
+	line-height: 1.7;
+}
+
+a {
+	text-decoration: none;
+	transition: all var(--se-transition-fast) ease;
+	box-shadow: 0 2px 0 0 currentColor, inset 0 -2px 0 0 currentColor;
+
+	&:focus {
+		outline: 2px solid transparent;
+		box-shadow: 0 0 0 var(--se-border-width);
+		position: relative;
+		z-index: 2;
+		border-radius: 0.4px;
+	}
+
+	&:hover {
+		box-shadow: 0 4px 0 0 currentColor, inset 0 -2px 0 0 currentColor;
+	}
+
+	.has-vertical-text & {
+		box-shadow: -2px 0 0 0 currentColor, inset 2px 0 0 0 currentColor;
+
+		&:hover {
+			box-shadow: -4px 0 0 0 currentColor, inset 2px 0 0 0 currentColor;
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 var(--se-border-width) currentColor;
+		}
+	}
+}
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border-radius: var(--se-border-radius);
+}
+
+::placeholder {
+	color: rgba(var(--se-color-text), .8);
+}
+
+/* spacing on smaller screens */
+@media ( max-width: 600px ) {
+	main {
+		padding: 32px;
+	}
+}
+
+@media ( max-width: 1200px ) { 
+    main {
+		padding: 0 32px;
+    }
+}
+
+
+p a,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+ul.wp-block-latest-posts li a{
+  background-color: var(--se-color-deep-cream);
+  padding: 2px 5px;
+}
+
+p a:hover,
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+ul.wp-block-latest-posts li a:hover{
+  background-color: var(--se-color-text);
+  color: var(--se-color-cream);
+  padding: 2px 5px;
+}
+
+a:hover, a:focus, a:active {
+  color: var(--se-color-tan);
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover, a:active {
+  outline: 0;
+}

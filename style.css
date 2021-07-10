@@ -11,6 +11,7 @@ Text Domain: sender
 Tags: translation-ready
 */
 :root {
+  --se-color-light-cream: #fffefd;
   --se-color-cream: #f3f0e7;
   --se-color-mid-cream: #f6f4ed;
   --se-color-deep-cream: #eadebd;
@@ -27,7 +28,7 @@ Tags: translation-ready
   --se-transition-fast: .15s;
   --se-border-radius: 2px;
   --se-site-width: 1280px;
-  --se-content-width: 888px;
+  --se-content-width: 880px;
   --se-font-stack: 'Lora', sans-serif;
   --se-font-header: 'Merriweather', sans-serif; }
 
@@ -38,7 +39,7 @@ Tags: translation-ready
   box-sizing: border-box; }
 
 html {
-  padding: 16px; }
+  padding: 0; }
 
 body {
   margin: 0;

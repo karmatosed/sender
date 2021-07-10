@@ -24,6 +24,11 @@
 			"color": {
 				"palette": [
                     {
+						"slug": "light-cream",
+						"color": "#fffefd",
+						"name": "Light Cream"
+					},
+                    {
 						"slug": "cream",
 						"color": "#f3f0e7",
 						"name": "Cream"

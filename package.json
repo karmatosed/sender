@@ -1,7 +1,7 @@
 {
-	"name": "excited-atoms",
+	"name": "sender",
 	"version": "1.0.0",
-	"description": "![excited-atoms](./screenshot.png)",
+	"description": "![sender](./screenshot.png)",
 	"main": "index.php",
 	"scripts": {
 		"sass-style": "node-sass --watch style.scss --output .",

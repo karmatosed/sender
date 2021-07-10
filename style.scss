@@ -13,6 +13,7 @@ Tags: translation-ready
 
 :root {
 	// Colors.
+	--se-color-light-cream: #fffefd;
 	--se-color-cream: #f3f0e7;
 	--se-color-mid-cream: #f6f4ed;
 	--se-color-deep-cream: #eadebd;
@@ -36,7 +37,7 @@ Tags: translation-ready
     --se-border-radius: 2px;
     
     --se-site-width: 1280px;
-    --se-content-width: 888px;
+    --se-content-width: 880px;
 
 	--se-font-stack: 'Lora', sans-serif;
 	--se-font-header: 'Merriweather', sans-serif;
@@ -88,7 +89,7 @@ $grid-unit-120: $grid-unit * 12;
 }
 
 html {
-	padding: $grid-unit-20;
+	padding: 0;
 }
 
 body {
@@ -147,7 +148,7 @@ img {
 /* spacing on smaller screens */
 @media ( max-width: 600px ) {
 	main {
-		padding: 32px;
+		padding: 32px 
 	}
 }
 

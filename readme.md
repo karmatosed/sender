@@ -1,1 +1,1 @@
-# excited-atoms theme
+# sender theme

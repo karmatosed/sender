@@ -96,3 +96,17 @@ function sender_fonts_url() {
 	// Make a single request for the theme fonts.
 	return esc_url_raw( 'https://fonts.googleapis.com/css2?' . implode( '&', $font_families ) );
 }
+
+/* Custom block styling setup */
+function sender_block_editor_script() {
+	wp_enqueue_script( 'block-styles', get_theme_file_uri( '/assets/block-styles.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
+}
+add_action( 'enqueue_block_editor_assets', 'sender_block_editor_script' );
+
+function sender_block_styles() {
+	wp_enqueue_style( 'sender-block-styles', get_theme_file_uri( '/assets/block-styles.css' ), false );
+}
+add_action( 'enqueue_block_assets', 'sender_block_styles' );
+
+/* Custom pattern setup */
+// To add to the theme

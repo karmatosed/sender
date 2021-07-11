@@ -1,0 +1,20 @@
+/* collection of seperators */
+.is-style-heart {
+  border: none;
+}
+
+.is-style-heart:after {
+  content: "\02665"!important;
+  display: block;
+  text-align: center;
+}
+
+.is-style-asterik {
+  border: none;
+}
+
+.is-style-asterik:after {
+  content: '***';
+  display: block;
+  text-align: center;
+}
